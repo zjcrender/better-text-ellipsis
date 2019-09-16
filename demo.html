@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .container {
+      font-size: 20px;
+    }
+    .content {
+      width: 100px;
+      background-color: #6be;
+      font-size: .7em;
+      white-space: nowrap;
+    }
+    span {
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+<input type="text" class="input">
+
+<div class="container">
+  <div class="content">
+    <span class="origin">0你A好g啊1你8好h啊II你@好~啊>></span>
+    <br><br>
+    <span class="span"></span>
+  </div>
+</div>
+
+<script src="./main.js"></script>
+<script>
+  const input = document.querySelector('.input');
+  const origin = document.querySelector('.origin');
+  const short = document.querySelector('.span');
+
+  const initialText = '0你A好g啊1你8好h啊II你@好~啊>>';
+  input.value = initialText;
+
+  function syncText() {
+    const text = getText(input.value, 100, short);
+    origin.innerText = input.value;
+    short.innerText = text;
+  }
+
+  syncText();
+
+  input.addEventListener('input', syncText)
+
+
+</script>
+</body>
+</html>
