@@ -1,0 +1,17 @@
+{
+  "name": "better-text-ellipsis",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "types/index.d.ts",
+  "author": "render",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.6.4",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9"
+  }
+}

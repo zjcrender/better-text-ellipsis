@@ -25,11 +25,11 @@
   <div class="content">
     <span class="origin">0你A好g啊1你8好h啊II你@好~啊>></span>
     <br><br>
-    <span class="span"></span>
+    <span class="span">reihsfdclsdk</span>
   </div>
 </div>
 
-<script src="./main.js"></script>
+<script src="../dist/index.js"></script>
 <script>
   const input = document.querySelector('.input');
   const origin = document.querySelector('.origin');
@@ -39,7 +39,7 @@
   input.value = initialText;
 
   function syncText() {
-    const text = getText(input.value, 100, short);
+    const text = calculateText(input.value, 100, short);
     origin.innerText = input.value;
     short.innerText = text;
   }
@@ -47,7 +47,6 @@
   syncText();
 
   input.addEventListener('input', syncText)
-
 
 </script>
 </body>
